@@ -10,13 +10,13 @@ import javax.swing.JFrame;
 public class Game extends JFrame implements Runnable, KeyListener {
 
     BufferedImage backBuffer;
-    int FPS = 15;
+    int FPS = 10;
     int janelaW = 1024;
     int janelaH = 321;
 
     Sprite vilao = new Sprite(2, 100, 185);
 
-    ImageIcon fundo = new ImageIcon("fundoN.jpg");
+    ImageIcon fundo = new ImageIcon("imagens/fundo.jpg");
 
     public void atualizar() {
 
@@ -45,8 +45,8 @@ public class Game extends JFrame implements Runnable, KeyListener {
         addKeyListener(this);
 
         //Carregando imagens da sprite
-        vilao.cenas[0] = new ImageIcon("dinoC1.png");
-        vilao.cenas[1] = new ImageIcon("dinoC2.png");
+        vilao.cenas[0] = new ImageIcon("imagens/dinoC1.png");
+        vilao.cenas[1] = new ImageIcon("imagens/dinoC2.png");
     }
 
     public void run() {
@@ -69,25 +69,25 @@ public class Game extends JFrame implements Runnable, KeyListener {
 
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode() == e.VK_UP){
-            vilao.cenas[0] = new ImageIcon("dino.png");
-            vilao.cenas[1] = new ImageIcon("dino.png");
+            vilao.cenas[0] = new ImageIcon("imagens/dino.png");
+            vilao.cenas[1] = new ImageIcon("imagens/dino.png");
         }
         if(e.getKeyCode() == e.VK_DOWN){
-            vilao.cenas[0] = new ImageIcon("dinoA1.png");
-            vilao.cenas[1] = new ImageIcon("dinoA2.png");
+            vilao.cenas[0] = new ImageIcon("imagens/dinoA1.png");
+            vilao.cenas[1] = new ImageIcon("imagens/dinoA2.png");
             vilao.y = 213;
         }
     }
     public void keyReleased(KeyEvent e) {
         if(e.getKeyCode() == e.VK_UP){
-            vilao.cenas[0] = new ImageIcon("dinoC1.png");
-            vilao.cenas[1] = new ImageIcon("dinoC2.png");
+            vilao.cenas[0] = new ImageIcon("imagens/dinoC1.png");
+            vilao.cenas[1] = new ImageIcon("imagens/dinoC2.png");
             vilao.y = 185;
         }
 
         if(e.getKeyCode() == e.VK_DOWN){
-            vilao.cenas[0] = new ImageIcon("dinoC1.png");
-            vilao.cenas[1] = new ImageIcon("dinoC2.png");
+            vilao.cenas[0] = new ImageIcon("imagens/dinoC1.png");
+            vilao.cenas[1] = new ImageIcon("imagens/dinoC2.png");
             vilao.y = 185;
         }
     }

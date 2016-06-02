@@ -43,7 +43,7 @@ public class NegativeImage {
 
         public TestPane() {
             try {
-                img = ImageIO.read(new File("fundoN.jpg"));
+                img = ImageIO.read(new File("imagens/fundo.jpg"));
             } catch (IOException ex) {
             }
         }
