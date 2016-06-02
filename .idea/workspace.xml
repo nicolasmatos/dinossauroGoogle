@@ -2,26 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="199bd3f9-52ad-4729-9c72-ed1fedf6fa81" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dinoAbaixado.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dinoC1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dinoC2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dinoM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/download.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/download.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fundo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fundoN.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ave1.png" afterPath="$PROJECT_DIR$/imagens/ave1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ave2.png" afterPath="$PROJECT_DIR$/imagens/ave2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dino.png" afterPath="$PROJECT_DIR$/imagens/dino.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dinoA1.png" afterPath="$PROJECT_DIR$/imagens/dinoA1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dinoA2.png" afterPath="$PROJECT_DIR$/imagens/dinoA2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dinossauro/Game.class" afterPath="$PROJECT_DIR$/out/production/dinossauro/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dinossauro/NegativeImage$TestPane.class" afterPath="$PROJECT_DIR$/out/production/dinossauro/NegativeImage$TestPane.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dinossauro/Boneco.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dinossauro/Fundo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dinossauro/Game.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Boneco.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Fundo.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Principal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dinossauro/Desenho.class" afterPath="$PROJECT_DIR$/out/production/dinossauro/Desenho.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dinossauro/DesenhoMovel.class" afterPath="$PROJECT_DIR$/out/production/dinossauro/DesenhoMovel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dinossauro/Principal.class" afterPath="$PROJECT_DIR$/out/production/dinossauro/Principal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dinossauro/Sprite.class" afterPath="$PROJECT_DIR$/out/production/dinossauro/Sprite.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NegativeImage.java" afterPath="$PROJECT_DIR$/src/NegativeImage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Desenho.java" afterPath="$PROJECT_DIR$/src/Desenho.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DesenhoMovel.java" afterPath="$PROJECT_DIR$/src/DesenhoMovel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sprite.java" afterPath="$PROJECT_DIR$/src/Sprite.java" />
     </list>
     <ignored path="dinossauro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,66 +38,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Principal.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Principal.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Principal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="29" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Desenho.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Desenho.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DesenhoMovel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DesenhoMovel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+              <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
               <folding>
-                <element signature="e#121#122#0" expanded="true" />
-                <element signature="e#135#136#0" expanded="true" />
-                <element signature="method#DesenhoMovel#1;class#DesenhoMovel#0" expanded="false" />
-                <element signature="method#setVelocidade#0;class#DesenhoMovel#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Boneco.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Boneco.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-              <folding>
-                <element signature="method#checaMovimento#0;class#Boneco#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-              <folding>
-                <element signature="method#atualizar#0;class#Game#0" expanded="false" />
-                <element signature="method#desenharGraficos#0;class#Game#0" expanded="false" />
-                <element signature="method#run#0;class#Game#0" expanded="false" />
-                <element signature="method#main#0;class#Game#0" expanded="false" />
-                <element signature="method#keyPressed#0;class#Game#0" expanded="false" />
-                <element signature="method#keyReleased#0;class#Game#0" expanded="false" />
-                <element signature="method#keyTyped#0;class#Game#0" expanded="false" />
+                <element signature="method#desenharGraficos#0;class#Principal#0" expanded="false" />
+                <element signature="method#run#0;class#Principal#0" expanded="false" />
+                <element signature="method#main#0;class#Principal#0" expanded="false" />
+                <element signature="method#keyTyped#0;class#Principal#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -112,9 +56,12 @@
       <file leaf-file-name="Sprite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="153">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="method#animar#0;class#Sprite#0" expanded="false" />
+                <element signature="method#animarMaisLento#0;class#Sprite#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,9 +69,40 @@
       <file leaf-file-name="NegativeImage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NegativeImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="202">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+              <folding>
+                <element signature="e#437#438#0" expanded="true" />
+                <element signature="e#472#473#0" expanded="true" />
+                <element signature="e#1563#1564#0" expanded="true" />
+                <element signature="e#1618#1619#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Desenho.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Desenho.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="method#Desenho#1;class#Desenho#0" expanded="false" />
+                <element signature="method#setX#0;class#Desenho#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DesenhoMovel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DesenhoMovel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="method#DesenhoMovel#1;class#DesenhoMovel#0" expanded="false" />
+                <element signature="method#setVelocidade#0;class#DesenhoMovel#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,16 +127,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DesenhoMovel.java" />
-        <option value="$PROJECT_DIR$/src/Boneco.java" />
-        <option value="$PROJECT_DIR$/src/Principal.java" />
-        <option value="$PROJECT_DIR$/src/Sprite.java" />
-        <option value="$PROJECT_DIR$/src/Fundo.java" />
         <option value="$PROJECT_DIR$/src/Background.java" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/NegativeImage.java" />
+        <option value="$PROJECT_DIR$/src/Sprite.java" />
+        <option value="$PROJECT_DIR$/src/Boneco.java" />
+        <option value="$PROJECT_DIR$/src/Fundo.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
+        <option value="$PROJECT_DIR$/src/DesenhoMovel.java" />
+        <option value="$PROJECT_DIR$/src/Desenho.java" />
+        <option value="$PROJECT_DIR$/src/Principal.java" />
       </list>
     </option>
   </component>
@@ -233,20 +212,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dinossauroGoogle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dinossauroGoogle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imagens" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -257,7 +222,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dinossauro" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -270,7 +235,7 @@
       <recent name="C:\Dev\Ideia\dinossauroGoogle" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NegativeImage">
+  <component name="RunManager" selected="Application.Principal">
     <configuration default="false" name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Principal" />
@@ -286,9 +251,9 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Game" />
+      <option name="MAIN_CLASS_NAME" value="Principal" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -734,14 +699,14 @@
     </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Principal" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Game" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Principal" />
       <item index="2" class="java.lang.String" itemvalue="Application.NegativeImage" />
       <item index="3" class="java.lang.String" itemvalue="Application.Fundo" />
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.NegativeImage" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Game" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Principal" />
+        <item index="1" class="java.lang.String" itemvalue="Application.NegativeImage" />
         <item index="2" class="java.lang.String" itemvalue="Application.Principal" />
         <item index="3" class="java.lang.String" itemvalue="Application.Fundo" />
       </list>
@@ -767,26 +732,26 @@
       <workItem from="1464778240949" duration="5117000" />
       <workItem from="1464869007319" duration="392000" />
       <workItem from="1464869416095" duration="8000" />
-      <workItem from="1464869495409" duration="1718000" />
+      <workItem from="1464869495409" duration="13679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33623000" />
+    <option name="totallyTimeSpent" value="45584000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32664436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -818,7 +783,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -831,7 +796,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -847,7 +817,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="method#Desenho#1;class#Desenho#0" expanded="false" />
+            <element signature="method#setX#0;class#Desenho#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -856,8 +829,6 @@
         <state relative-caret-position="102">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="e#121#122#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
             <element signature="method#DesenhoMovel#1;class#DesenhoMovel#0" expanded="false" />
             <element signature="method#setVelocidade#0;class#DesenhoMovel#0" expanded="false" />
           </folding>
@@ -868,24 +839,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="method#checaMovimento#0;class#Boneco#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#atualizar#0;class#Game#0" expanded="false" />
-            <element signature="method#desenharGraficos#0;class#Game#0" expanded="false" />
-            <element signature="method#run#0;class#Game#0" expanded="false" />
-            <element signature="method#main#0;class#Game#0" expanded="false" />
-            <element signature="method#keyPressed#0;class#Game#0" expanded="false" />
-            <element signature="method#keyReleased#0;class#Game#0" expanded="false" />
-            <element signature="method#keyTyped#0;class#Game#0" expanded="false" />
+            <element signature="method#desenharGraficos#0;class#Principal#0" expanded="false" />
+            <element signature="method#run#0;class#Principal#0" expanded="false" />
+            <element signature="method#main#0;class#Principal#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#Principal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -894,7 +860,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#animar#0;class#Sprite#0" expanded="false" />
+            <element signature="method#animarMaisLento#0;class#Sprite#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -902,7 +871,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -919,8 +893,6 @@
         <state relative-caret-position="102">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="e#121#122#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
             <element signature="method#DesenhoMovel#1;class#DesenhoMovel#0" expanded="false" />
             <element signature="method#setVelocidade#0;class#DesenhoMovel#0" expanded="false" />
           </folding>
@@ -931,24 +903,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="method#checaMovimento#0;class#Boneco#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#atualizar#0;class#Game#0" expanded="false" />
-            <element signature="method#desenharGraficos#0;class#Game#0" expanded="false" />
-            <element signature="method#run#0;class#Game#0" expanded="false" />
-            <element signature="method#main#0;class#Game#0" expanded="false" />
-            <element signature="method#keyPressed#0;class#Game#0" expanded="false" />
-            <element signature="method#keyReleased#0;class#Game#0" expanded="false" />
-            <element signature="method#keyTyped#0;class#Game#0" expanded="false" />
+            <element signature="method#desenharGraficos#0;class#Principal#0" expanded="false" />
+            <element signature="method#run#0;class#Principal#0" expanded="false" />
+            <element signature="method#main#0;class#Principal#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#Principal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -957,7 +924,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#animar#0;class#Sprite#0" expanded="false" />
+            <element signature="method#animarMaisLento#0;class#Sprite#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -965,7 +935,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -973,10 +948,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#atualizar#0;class#Fundo#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -993,8 +965,6 @@
         <state relative-caret-position="102">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="e#121#122#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
             <element signature="method#DesenhoMovel#1;class#DesenhoMovel#0" expanded="false" />
             <element signature="method#setVelocidade#0;class#DesenhoMovel#0" expanded="false" />
           </folding>
@@ -1005,24 +975,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="method#checaMovimento#0;class#Boneco#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
-            <element signature="method#atualizar#0;class#Game#0" expanded="false" />
-            <element signature="method#desenharGraficos#0;class#Game#0" expanded="false" />
-            <element signature="method#run#0;class#Game#0" expanded="false" />
-            <element signature="method#main#0;class#Game#0" expanded="false" />
-            <element signature="method#keyPressed#0;class#Game#0" expanded="false" />
-            <element signature="method#keyReleased#0;class#Game#0" expanded="false" />
-            <element signature="method#keyTyped#0;class#Game#0" expanded="false" />
+            <element signature="method#desenharGraficos#0;class#Principal#0" expanded="false" />
+            <element signature="method#run#0;class#Principal#0" expanded="false" />
+            <element signature="method#main#0;class#Principal#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#Principal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1031,7 +996,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#animar#0;class#Sprite#0" expanded="false" />
+            <element signature="method#animarMaisLento#0;class#Sprite#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1039,7 +1007,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1047,10 +1020,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#atualizar#0;class#Fundo#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,8 +1037,6 @@
         <state relative-caret-position="102">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="e#121#122#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
             <element signature="method#DesenhoMovel#1;class#DesenhoMovel#0" expanded="false" />
             <element signature="method#setVelocidade#0;class#DesenhoMovel#0" expanded="false" />
           </folding>
@@ -1079,24 +1047,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="method#checaMovimento#0;class#Boneco#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
           <folding>
-            <element signature="method#atualizar#0;class#Game#0" expanded="false" />
-            <element signature="method#desenharGraficos#0;class#Game#0" expanded="false" />
-            <element signature="method#run#0;class#Game#0" expanded="false" />
-            <element signature="method#main#0;class#Game#0" expanded="false" />
-            <element signature="method#keyPressed#0;class#Game#0" expanded="false" />
-            <element signature="method#keyReleased#0;class#Game#0" expanded="false" />
-            <element signature="method#keyTyped#0;class#Game#0" expanded="false" />
+            <element signature="method#desenharGraficos#0;class#Principal#0" expanded="false" />
+            <element signature="method#run#0;class#Principal#0" expanded="false" />
+            <element signature="method#main#0;class#Principal#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#Principal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1105,7 +1068,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#animar#0;class#Sprite#0" expanded="false" />
+            <element signature="method#animarMaisLento#0;class#Sprite#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1113,7 +1079,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="50" />
-          <folding />
+          <folding>
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1121,10 +1092,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#atualizar#0;class#Fundo#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,10 +1108,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#atualizar#0;class#Fundo#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,7 +1116,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1160,8 +1130,6 @@
         <state relative-caret-position="238">
           <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
-            <element signature="e#121#122#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
             <element signature="method#DesenhoMovel#1;class#DesenhoMovel#0" expanded="false" />
             <element signature="method#setVelocidade#0;class#DesenhoMovel#0" expanded="false" />
           </folding>
@@ -1172,9 +1140,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="method#checaMovimento#0;class#Boneco#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1187,25 +1153,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Downloads/Game.java" />
-    <entry file="file://$PROJECT_DIR$/src/Fundo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#atualizar#0;class#Fundo#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Principal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="29" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Background.java" />
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1247,37 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DesenhoMovel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#121#122#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="method#DesenhoMovel#1;class#DesenhoMovel#0" expanded="false" />
-            <element signature="method#setVelocidade#0;class#DesenhoMovel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Boneco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="method#checaMovimento#0;class#Boneco#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Desenho.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18683">
@@ -1286,34 +1202,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Boneco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fundo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Principal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Desenho.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="method#Desenho#1;class#Desenho#0" expanded="false" />
+            <element signature="method#setX#0;class#Desenho#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesenhoMovel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="method#DesenhoMovel#1;class#DesenhoMovel#0" expanded="false" />
+            <element signature="method#setVelocidade#0;class#DesenhoMovel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="method#animar#0;class#Sprite#0" expanded="false" />
+            <element signature="method#animarMaisLento#0;class#Sprite#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NegativeImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="202">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
           <folding>
-            <element signature="method#atualizar#0;class#Game#0" expanded="false" />
-            <element signature="method#desenharGraficos#0;class#Game#0" expanded="false" />
-            <element signature="method#run#0;class#Game#0" expanded="false" />
-            <element signature="method#main#0;class#Game#0" expanded="false" />
-            <element signature="method#keyPressed#0;class#Game#0" expanded="false" />
-            <element signature="method#keyReleased#0;class#Game#0" expanded="false" />
-            <element signature="method#keyTyped#0;class#Game#0" expanded="false" />
+            <element signature="method#desenharGraficos#0;class#Principal#0" expanded="false" />
+            <element signature="method#run#0;class#Principal#0" expanded="false" />
+            <element signature="method#main#0;class#Principal#0" expanded="false" />
+            <element signature="method#keyTyped#0;class#Principal#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,4 @@
-import java.awt.Image;
+import javax.swing.ImageIcon;
 
 public class DesenhoMovel extends Desenho {
 	
@@ -9,9 +9,8 @@ public class DesenhoMovel extends Desenho {
 		super();
 	}
 
-	public DesenhoMovel(Image imagem, int x, int y, int vel)
-	{
-		super(imagem, x, y);
+	public DesenhoMovel(int qtdImagens, int x, int y, int vel) {
+		super(qtdImagens, x, y);
 		this.setVelocidade(vel);
 	}
 

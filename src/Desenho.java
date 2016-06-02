@@ -1,32 +1,29 @@
-import java.awt.Image;
+import javax.swing.ImageIcon;
 
 public class Desenho {
 	
 	private int x;
 	private int y;
-	private Image imagem;
+	private ImageIcon imagens[];
 	
 	public Desenho()
 	{
 		super();
 	}
 
-	public Desenho(Image imagem, int x, int y) 
-	{
+	public Desenho(int qtdImagens, int x, int y) {
 		super();
-		this.setImagem(imagem);
+		imagens = new ImageIcon[qtdImagens];
 		this.setX(x);
 		this.setY(y);
 	}
 
-	public void setX(int x) 
-	{
+	public void setX(int x) {
 		if (x >= 0)
 		{
 			this.x = x;
 		}
 	}
-
 	public int getX() 
 	{
 		return x;
@@ -36,19 +33,18 @@ public class Desenho {
 	{
 		this.y = y;
 	}
-
 	public int getY() 
 	{
 		return y;
 	}
-	
-	public void setImagem(Image imagem) 
-	{
-		this.imagem = imagem;
-	}
 
-	public Image getImagem() 
-	{
-		return imagem;
+	public void setImagem(ImageIcon imagem, int pos) {
+		this.imagens[pos] = imagem;
+	}
+	public ImageIcon getImagem(int pos) {
+		return imagens[pos];
+	}
+	public ImageIcon[] getImagens() {
+		return imagens;
 	}
 }
