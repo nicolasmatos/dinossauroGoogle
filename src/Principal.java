@@ -17,7 +17,6 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     private int yInicial = 195;
     int pulo = 0, queda = 0;
 
-
     ImageIcon dino = new ImageIcon("imagens/dino.png");
     ImageIcon dinoC1 = new ImageIcon("imagens/dinoC1.png");
     ImageIcon dinoC2 = new ImageIcon("imagens/dinoC2.png");
@@ -37,6 +36,11 @@ public class Principal extends JFrame implements Runnable, KeyListener {
             vilao.moverBaixo();
             queda--;
         }
+        /*
+        if (pulo == 0 && queda == 0) {
+            vilao.setImagem(dinoC1, 0);
+            vilao.setImagem(dinoC2, 1);
+        }*/
     }
 
     public void desenharGraficos() {
@@ -96,8 +100,12 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         if(e.getKeyCode() == e.VK_DOWN){
             vilao.setImagem(dinoA1, 0);
             vilao.setImagem(dinoA2, 1);
-            //vilao.setY(yInicial + 28);
+            if (pulo == 0 && queda == 0) {
+                vilao.setY(yInicial + 28);
+            }
             if(pulo > 0){
+                vilao.setImagem(dino, 0);
+                vilao.setImagem(dino, 1);
                 queda = ALTPULO - pulo;
                 pulo = 0;
             }
@@ -105,18 +113,25 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     }
     public void keyReleased(KeyEvent e) {
         if(e.getKeyCode() == e.VK_UP){
-            vilao.setImagem(dinoC1, 0);
-            vilao.setImagem(dinoC2, 1);
-            //vilao.setY(yInicial);
+            if (pulo != 0 || queda != 0) {
+                vilao.setImagem(dino, 0);
+                vilao.setImagem(dino, 1);
+            }
+            else{
+                vilao.setImagem(dinoC1, 0);
+                vilao.setImagem(dinoC2, 1);
+                //vilao.setY(yInicial);
+            }
         }
 
         if(e.getKeyCode() == e.VK_DOWN){
             vilao.setImagem(dinoC1, 0);
             vilao.setImagem(dinoC2, 1);
-            //vilao.setY(yInicial);
+            if (pulo == 0 && queda == 0) {
+                vilao.setY(yInicial);
+            }
         }
     }
     public void keyTyped(KeyEvent e) {
-
     }
 }
