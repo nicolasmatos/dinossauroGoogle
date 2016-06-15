@@ -24,33 +24,33 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     ImageIcon dinoA2 = new ImageIcon("imagens/dinoA2.png");
     ImageIcon dinoM = new ImageIcon("imagens/dinoM.png");
 
-    Sprite vilao = new Sprite(2, xInicial, yInicial, 10);
+    Sprite dinossauro = new Sprite(2, xInicial, yInicial, 10);
 
     ImageIcon fundo = new ImageIcon("imagens/fundo.jpg");
 
     public void atualizar() {
         if (pulo > 0) {
-            vilao.moverCima();
+            dinossauro.moverCima();
             pulo--;
         }else if (queda > 0) {
-            vilao.moverBaixo();
+            dinossauro.moverBaixo();
             queda--;
         }
         /*
         if (pulo == 0 && queda == 0) {
-            vilao.setImagem(dinoC1, 0);
-            vilao.setImagem(dinoC2, 1);
+            dinossauro.setImagem(dinoC1, 0);
+            dinossauro.setImagem(dinoC2, 1);
         }*/
     }
 
-    public void desenharGraficos() {
+    public void desenharObjetos() {
         Graphics g = getGraphics();
         Graphics bbg = backBuffer.getGraphics();
-        int cena = vilao.getCena();
+        int cena = dinossauro.getCena();
         //Desenhando o fundo
         bbg.drawImage(fundo.getImage(),0,0,this);
-        bbg.drawImage(vilao.getImagem(cena).getImage(), vilao.getX(), vilao.getY(), this);
-        vilao.animar();
+        bbg.drawImage(dinossauro.getImagem(cena).getImage(), dinossauro.getX(), dinossauro.getY(), this);
+        dinossauro.animar();
         g.drawImage(backBuffer, 0, 0, this);
     }
 
@@ -66,15 +66,15 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         addKeyListener(this);
 
         //Carregando imagens da sprite
-        vilao.setImagem(dinoC1, 0);
-        vilao.setImagem(dinoC2, 1);
+        dinossauro.setImagem(dinoC1, 0);
+        dinossauro.setImagem(dinoC2, 1);
     }
 
     public void run() {
         inicializar();
         while (true) {
             atualizar();
-            desenharGraficos();
+            desenharObjetos();
             try {
                 Thread.sleep(1000/FPS);
             } catch (Exception e) {
@@ -85,27 +85,28 @@ public class Principal extends JFrame implements Runnable, KeyListener {
 
     public static void main(String[] args) {
         Principal game = new Principal();
-        game.run();
+        Thread gameT = new Thread(game);
+        gameT.start();
     }
 
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode() == e.VK_UP){
-            vilao.setImagem(dino, 0);
-            vilao.setImagem(dino, 1);
+            dinossauro.setImagem(dino, 0);
+            dinossauro.setImagem(dino, 1);
             if(pulo == 0 && queda == 0){
                 pulo = ALTPULO;
                 queda = ALTPULO;
             }
         }
         if(e.getKeyCode() == e.VK_DOWN){
-            vilao.setImagem(dinoA1, 0);
-            vilao.setImagem(dinoA2, 1);
+            dinossauro.setImagem(dinoA1, 0);
+            dinossauro.setImagem(dinoA2, 1);
             if (pulo == 0 && queda == 0) {
-                vilao.setY(yInicial + 28);
+                dinossauro.setY(yInicial + 28);
             }
             if(pulo > 0){
-                vilao.setImagem(dino, 0);
-                vilao.setImagem(dino, 1);
+                dinossauro.setImagem(dino, 0);
+                dinossauro.setImagem(dino, 1);
                 queda = ALTPULO - pulo;
                 pulo = 0;
             }
@@ -114,21 +115,21 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     public void keyReleased(KeyEvent e) {
         if(e.getKeyCode() == e.VK_UP){
             if (pulo != 0 || queda != 0) {
-                vilao.setImagem(dino, 0);
-                vilao.setImagem(dino, 1);
+                dinossauro.setImagem(dino, 0);
+                dinossauro.setImagem(dino, 1);
             }
             else{
-                vilao.setImagem(dinoC1, 0);
-                vilao.setImagem(dinoC2, 1);
-                //vilao.setY(yInicial);
+                dinossauro.setImagem(dinoC1, 0);
+                dinossauro.setImagem(dinoC2, 1);
+                //dinossauro.setY(yInicial);
             }
         }
 
         if(e.getKeyCode() == e.VK_DOWN){
-            vilao.setImagem(dinoC1, 0);
-            vilao.setImagem(dinoC2, 1);
+            dinossauro.setImagem(dinoC1, 0);
+            dinossauro.setImagem(dinoC2, 1);
             if (pulo == 0 && queda == 0) {
-                vilao.setY(yInicial);
+                dinossauro.setY(yInicial);
             }
         }
     }
