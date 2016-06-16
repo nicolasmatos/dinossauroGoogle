@@ -63,8 +63,17 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         g.setColor(Color.BLACK);
         g.drawString("Pontuacao: " + Integer.toString(dinossauro.getPontuacao()), LARGURA-220, 60);
         g.drawImage(backBuffer, 0, 0, this);
-        if (dinossauro.getTamSprite().intersects(ave.getTamSprite())) {
-            ave.setX(700);
+        try {
+            colisao(dinossauro, ave);
+        } catch (ColisaoException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void colisao(Sprite a, Sprite b) throws ColisaoException {
+        if (a.getTamSprite().intersects(b.getTamSprite())){
+            b.setX(700);
+            throw new ColisaoException();
         }
     }
 
