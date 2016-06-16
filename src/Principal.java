@@ -14,7 +14,7 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     int FPS = 25;
     private final int LARGURA = 1024;
     private final int ALTURA = 321;
-    private final int ALTPULO = 10;
+    private final int ALTPULO = 15;
     private int xInicial = 100;
     private int yInicial = 195;
     private boolean status = true;
@@ -26,21 +26,30 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     ImageIcon dinoA1 = new ImageIcon("imagens/dinoA1.png");
     ImageIcon dinoA2 = new ImageIcon("imagens/dinoA2.png");
     ImageIcon dinoM = new ImageIcon("imagens/dinoM.png");
-    ImageIcon ave1 = new ImageIcon("imagens/ave1.1.png");
-    ImageIcon ave2 = new ImageIcon("imagens/ave2.1.png");
+    ImageIcon ave1 = new ImageIcon("imagens/ave1.2.png");
+    ImageIcon ave2 = new ImageIcon("imagens/ave2.2.png");
+    ImageIcon caqui1 = new ImageIcon("imagens/caquito1.png");
+    ImageIcon caqui2_1 = new ImageIcon("imagens/caquito2.1.png");
+    ImageIcon caqui2_2 = new ImageIcon("imagens/caquito2.2.png");
+    ImageIcon caqui3 = new ImageIcon("imagens/caquito3.png");
 
     Sprite dinossauro = new Sprite(2, xInicial, yInicial, 10, 64, 69);
 
     ArrayList<Sprite> desenhos = new ArrayList<Sprite>();
 
-    Sprite aveAlto = new Ave(2, 1000, 125, 10, 104, 65);
-    Sprite aveMeio = new Ave(2, 1600, 155, 10, 104, 65);
-    Sprite aveBaixo = new Ave(2, 1300, 195, 10, 104, 65);
+    Sprite aveAlto = new Ave(2, 3600, 135, 10, 84, 53);
+    Sprite aveMeio = new Ave(2, 4200, 165, 10, 84, 53);
+    Sprite aveBaixo = new Ave(2, 4800, 205, 10, 84, 53);
+
+    Sprite caquito1 = new Caquito(2, 1000, 230, 10, 14, 19);
+    Sprite caquito2_1 = new Caquito(2, 1600, 215, 10, 36, 48);
+    Sprite caquito2_2 = new Caquito(2, 2200, 215, 10, 28, 46);
+    Sprite caquito3 = new Caquito(2, 3000, 215, 10, 50, 48);
 
     Dimension dinoCD = new Dimension(64, 69);
     Dimension dinoAD = new Dimension(85, 41);
 
-    ImageIcon fundo = new ImageIcon("imagens/fundo.jpg");
+    ImageIcon fundo = new ImageIcon("imagens/fundoT.jpg");
     ImageIcon gameOver = new ImageIcon("imagens/game_over.jpg");
 
     public void atualizar() {
@@ -80,16 +89,46 @@ public class Principal extends JFrame implements Runnable, KeyListener {
 
                 if (desenho instanceof Ave) {
                     if (desenho.getX() == 0) {
-                        desenho.setX(1000);
+                        desenho.setX(2300);
                         switch (new Random().nextInt(3)) {
                             case 0:
-                                desenho.setY(125);
+                                desenho.setY(135);
                                 break;
                             case 1:
-                                desenho.setY(155);
+                                desenho.setY(165);
                                 break;
                             case 2:
-                                desenho.setY(195);
+                                desenho.setY(205);
+                                break;
+                        }
+                    }
+                    desenho.moverEsquerda();
+                    desenho.moverRetangulo();
+                }
+
+                if (desenho instanceof Caquito) {
+                    if (desenho.getX() == 0) {
+                        desenho.setX(3400);
+
+                        switch (new Random().nextInt(4)) {
+                            case 0:
+                                desenho.setImagem(caqui1, 0);
+                                desenho.setImagem(caqui1, 1);
+                                desenho.setY(230);
+                                break;
+                            case 1:
+                                desenho.setImagem(caqui2_1, 0);
+                                desenho.setImagem(caqui2_1, 1);
+                                desenho.setY(215);
+                                break;
+                            case 2:
+                                desenho.setImagem(caqui2_2, 0);
+                                desenho.setImagem(caqui2_2, 1);
+                                desenho.setY(215);
+                            case 3:
+                                desenho.setImagem(caqui3, 0);
+                                desenho.setImagem(caqui3, 1);
+                                desenho.setY(215);
                                 break;
                         }
                     }
@@ -103,18 +142,18 @@ public class Principal extends JFrame implements Runnable, KeyListener {
                 colisao(dinossauro, aveMeio);
                 colisao(dinossauro, aveBaixo);
             } catch (ColisaoException e) {
-                e.printStackTrace();
+                dinossauro.setImagem(dinoM, 0);
+                dinossauro.setImagem(dinoM, 1);
+                g = getGraphics();
+                bbg = backBuffer.getGraphics();
+                bbg.drawImage(gameOver.getImage(),0,0,this);
+                bbg.setFont(new Font("Arial", 1, 30));
+                bbg.setColor(Color.WHITE);
+                bbg.drawString("Pontuacao: " + Integer.toString(dinossauro.getPontuacao()), LARGURA/2 - 110, 60);
+                dinossauro.animar();
+                g.drawImage(backBuffer, 0, 0, this);
             }
 
-            g.drawImage(backBuffer, 0, 0, this);
-        }
-        else {
-            Graphics g = getGraphics();
-            Graphics bbg = backBuffer.getGraphics();
-            bbg.drawImage(gameOver.getImage(),0,0,this);
-            bbg.setFont(new Font("Arial", 1, 30));
-            bbg.setColor(Color.WHITE);
-            bbg.drawString("Pontuacao: " + Integer.toString(dinossauro.getPontuacao()), LARGURA-520, 60);
             g.drawImage(backBuffer, 0, 0, this);
         }
     }
@@ -122,7 +161,6 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     public void colisao(Sprite a, Sprite b) throws ColisaoException {
         if (a.getTamSprite().intersects(b.getTamSprite())){
             status = false;
-            //System.exit(0);
             throw new ColisaoException(a);
         }
     }
@@ -147,11 +185,22 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         aveMeio.setImagem(ave2, 1);
         aveBaixo.setImagem(ave1, 0);
         aveBaixo.setImagem(ave2, 1);
+        caquito1.setImagem(caqui1, 0);
+        caquito1.setImagem(caqui1, 1);
+        caquito2_1.setImagem(caqui2_1, 0);
+        caquito2_1.setImagem(caqui2_1, 1);
+        caquito2_2.setImagem(caqui2_2, 0);
+        caquito2_2.setImagem(caqui2_2, 1);
+        caquito3.setImagem(caqui3, 0);
+        caquito3.setImagem(caqui3, 1);
         desenhos.add(dinossauro);
         desenhos.add(aveAlto);
         desenhos.add(aveMeio);
         desenhos.add(aveBaixo);
-
+        desenhos.add(caquito1);
+        desenhos.add(caquito2_1);
+        desenhos.add(caquito2_2);
+        desenhos.add(caquito3);
     }
 
     public void run() {
