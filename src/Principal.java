@@ -23,8 +23,11 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     ImageIcon dinoA1 = new ImageIcon("imagens/dinoA1.png");
     ImageIcon dinoA2 = new ImageIcon("imagens/dinoA2.png");
     ImageIcon dinoM = new ImageIcon("imagens/dinoM.png");
+    ImageIcon ave1 = new ImageIcon("imagens/ave1.png");
+    ImageIcon ave2 = new ImageIcon("imagens/ave2.png");
 
-    Sprite dinossauro = new Sprite(2, xInicial, yInicial, 10);
+    Sprite dinossauro = new Sprite(2, xInicial, yInicial, 10, 64, 69);
+    Sprite ave = new Sprite(2, 700, 165, 10, 180, 113);
 
     ImageIcon fundo = new ImageIcon("imagens/fundo.jpg");
 
@@ -52,10 +55,17 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         bbg.drawImage(fundo.getImage(),0,0,this);
         bbg.drawImage(dinossauro.getImagem(cena).getImage(), dinossauro.getX(), dinossauro.getY(), this);
         dinossauro.animar();
+        bbg.drawImage(ave.getImagem(cena).getImage(), ave.getX(), ave.getY(), this);
+        ave.animar();
+        ave.moverEsquerda();
+        ave.moverRetangulo();
         g.setFont(new Font("Arial", 1, 20));
         g.setColor(Color.BLACK);
         g.drawString("Pontuacao: " + Integer.toString(dinossauro.getPontuacao()), LARGURA-220, 60);
         g.drawImage(backBuffer, 0, 0, this);
+        if (dinossauro.getTamSprite().intersects(ave.getTamSprite())) {
+            ave.setX(700);
+        }
     }
 
     public void inicializar() {
@@ -72,6 +82,8 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         //Carregando imagens da sprite
         dinossauro.setImagem(dinoC1, 0);
         dinossauro.setImagem(dinoC2, 1);
+        ave.setImagem(ave1, 0);
+        ave.setImagem(ave2, 1);
     }
 
     public void run() {
