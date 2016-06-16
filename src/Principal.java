@@ -2,6 +2,8 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.Random;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -9,12 +11,13 @@ import javax.swing.JFrame;
 public class Principal extends JFrame implements Runnable, KeyListener {
 
     BufferedImage backBuffer;
-    int FPS = 15;
+    int FPS = 25;
     private final int LARGURA = 1024;
     private final int ALTURA = 321;
     private final int ALTPULO = 10;
     private int xInicial = 100;
     private int yInicial = 195;
+    private boolean status = true;
     int pulo = 0, queda = 0;
 
     ImageIcon dino = new ImageIcon("imagens/dino.png");
@@ -23,13 +26,22 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     ImageIcon dinoA1 = new ImageIcon("imagens/dinoA1.png");
     ImageIcon dinoA2 = new ImageIcon("imagens/dinoA2.png");
     ImageIcon dinoM = new ImageIcon("imagens/dinoM.png");
-    ImageIcon ave1 = new ImageIcon("imagens/ave1.png");
-    ImageIcon ave2 = new ImageIcon("imagens/ave2.png");
+    ImageIcon ave1 = new ImageIcon("imagens/ave1.1.png");
+    ImageIcon ave2 = new ImageIcon("imagens/ave2.1.png");
 
     Sprite dinossauro = new Sprite(2, xInicial, yInicial, 10, 64, 69);
-    Sprite ave = new Sprite(2, 700, 165, 10, 180, 113);
+
+    ArrayList<Sprite> desenhos = new ArrayList<Sprite>();
+
+    Sprite aveAlto = new Ave(2, 1000, 125, 10, 104, 65);
+    Sprite aveMeio = new Ave(2, 1600, 155, 10, 104, 65);
+    Sprite aveBaixo = new Ave(2, 1300, 195, 10, 104, 65);
+
+    Dimension dinoCD = new Dimension(64, 69);
+    Dimension dinoAD = new Dimension(85, 41);
 
     ImageIcon fundo = new ImageIcon("imagens/fundo.jpg");
+    ImageIcon gameOver = new ImageIcon("imagens/game_over.jpg");
 
     public void atualizar() {
         if (pulo > 0) {
@@ -47,33 +59,71 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     }
 
     public void desenharObjetos() {
-        dinossauro.setPontuacao(dinossauro.getPontuacao() + 100);
-        Graphics g = getGraphics();
-        Graphics bbg = backBuffer.getGraphics();
-        int cena = dinossauro.getCena();
-        //Desenhando o fundo
-        bbg.drawImage(fundo.getImage(),0,0,this);
-        bbg.drawImage(dinossauro.getImagem(cena).getImage(), dinossauro.getX(), dinossauro.getY(), this);
-        dinossauro.animar();
-        bbg.drawImage(ave.getImagem(cena).getImage(), ave.getX(), ave.getY(), this);
-        ave.animar();
-        ave.moverEsquerda();
-        ave.moverRetangulo();
-        g.setFont(new Font("Arial", 1, 20));
-        g.setColor(Color.BLACK);
-        g.drawString("Pontuacao: " + Integer.toString(dinossauro.getPontuacao()), LARGURA-220, 60);
-        g.drawImage(backBuffer, 0, 0, this);
-        try {
-            colisao(dinossauro, ave);
-        } catch (ColisaoException e) {
-            e.printStackTrace();
+        if (status == true) {
+            if (System.currentTimeMillis() % 1 == 0) {
+                dinossauro.setPontuacao(dinossauro.getPontuacao() + 1);
+            }
+
+            Graphics g = getGraphics();
+            Graphics bbg = backBuffer.getGraphics();
+
+            int cena = dinossauro.getCena();
+
+            //Desenhando o fundo
+            bbg.drawImage(fundo.getImage(), 0, 0, this);
+
+            bbg.drawRect(dinossauro.getX(), dinossauro.getY(), (int) dinossauro.getTamSprite().getWidth(), (int) dinossauro.getTamSprite().getHeight());
+
+            for (Sprite desenho : desenhos) {
+                bbg.drawImage(desenho.getImagem(cena).getImage(), desenho.getX(), desenho.getY(), this);
+                desenho.animar();
+
+                if (desenho instanceof Ave) {
+                    if (desenho.getX() == 0) {
+                        desenho.setX(1000);
+                        switch (new Random().nextInt(3)) {
+                            case 0:
+                                desenho.setY(125);
+                                break;
+                            case 1:
+                                desenho.setY(155);
+                                break;
+                            case 2:
+                                desenho.setY(195);
+                                break;
+                        }
+                    }
+                    desenho.moverEsquerda();
+                    desenho.moverRetangulo();
+                }
+            }
+
+            try {
+                colisao(dinossauro, aveAlto);
+                colisao(dinossauro, aveMeio);
+                colisao(dinossauro, aveBaixo);
+            } catch (ColisaoException e) {
+                e.printStackTrace();
+            }
+
+            g.drawImage(backBuffer, 0, 0, this);
+        }
+        else {
+            Graphics g = getGraphics();
+            Graphics bbg = backBuffer.getGraphics();
+            bbg.drawImage(gameOver.getImage(),0,0,this);
+            bbg.setFont(new Font("Arial", 1, 30));
+            bbg.setColor(Color.WHITE);
+            bbg.drawString("Pontuacao: " + Integer.toString(dinossauro.getPontuacao()), LARGURA-520, 60);
+            g.drawImage(backBuffer, 0, 0, this);
         }
     }
 
     public void colisao(Sprite a, Sprite b) throws ColisaoException {
         if (a.getTamSprite().intersects(b.getTamSprite())){
-            b.setX(700);
-            throw new ColisaoException();
+            status = false;
+            //System.exit(0);
+            throw new ColisaoException(a);
         }
     }
 
@@ -91,8 +141,17 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         //Carregando imagens da sprite
         dinossauro.setImagem(dinoC1, 0);
         dinossauro.setImagem(dinoC2, 1);
-        ave.setImagem(ave1, 0);
-        ave.setImagem(ave2, 1);
+        aveAlto.setImagem(ave1, 0);
+        aveAlto.setImagem(ave2, 1);
+        aveMeio.setImagem(ave1, 0);
+        aveMeio.setImagem(ave2, 1);
+        aveBaixo.setImagem(ave1, 0);
+        aveBaixo.setImagem(ave2, 1);
+        desenhos.add(dinossauro);
+        desenhos.add(aveAlto);
+        desenhos.add(aveMeio);
+        desenhos.add(aveBaixo);
+
     }
 
     public void run() {
@@ -118,6 +177,8 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         if(e.getKeyCode() == e.VK_UP){
             dinossauro.setImagem(dino, 0);
             dinossauro.setImagem(dino, 1);
+            dinossauro.getTamSprite().setSize(dinoCD);
+            dinossauro.getTamSprite().setLocation(dinossauro.getX(), dinossauro.getY());
             if(pulo == 0 && queda == 0){
                 pulo = ALTPULO;
                 queda = ALTPULO;
@@ -126,6 +187,8 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         if(e.getKeyCode() == e.VK_DOWN){
             dinossauro.setImagem(dinoA1, 0);
             dinossauro.setImagem(dinoA2, 1);
+            dinossauro.getTamSprite().setSize(dinoAD);
+            dinossauro.getTamSprite().setLocation(dinossauro.getX(), dinossauro.getY());
             if (pulo == 0 && queda == 0) {
                 dinossauro.setY(yInicial + 28);
             }
@@ -142,10 +205,14 @@ public class Principal extends JFrame implements Runnable, KeyListener {
             if (pulo != 0 || queda != 0) {
                 dinossauro.setImagem(dino, 0);
                 dinossauro.setImagem(dino, 1);
+                dinossauro.getTamSprite().setSize(dinoCD);
+                dinossauro.getTamSprite().setLocation(dinossauro.getX(), dinossauro.getY());
             }
             else{
                 dinossauro.setImagem(dinoC1, 0);
                 dinossauro.setImagem(dinoC2, 1);
+                dinossauro.getTamSprite().setSize(dinoCD);
+                dinossauro.getTamSprite().setLocation(dinossauro.getX(), dinossauro.getY());
                 //dinossauro.setY(yInicial);
             }
         }
@@ -153,6 +220,8 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         if(e.getKeyCode() == e.VK_DOWN){
             dinossauro.setImagem(dinoC1, 0);
             dinossauro.setImagem(dinoC2, 1);
+            dinossauro.getTamSprite().setSize(dinoCD);
+            dinossauro.getTamSprite().setLocation(dinossauro.getX(), dinossauro.getY() - 30);
             if (pulo == 0 && queda == 0) {
                 dinossauro.setY(yInicial);
             }
