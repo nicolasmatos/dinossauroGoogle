@@ -44,6 +44,7 @@ public class Principal extends JFrame implements Runnable, KeyListener {
     }
 
     public void desenharObjetos() {
+        dinossauro.setPontuacao(dinossauro.getPontuacao() + 100);
         Graphics g = getGraphics();
         Graphics bbg = backBuffer.getGraphics();
         int cena = dinossauro.getCena();
@@ -51,6 +52,9 @@ public class Principal extends JFrame implements Runnable, KeyListener {
         bbg.drawImage(fundo.getImage(),0,0,this);
         bbg.drawImage(dinossauro.getImagem(cena).getImage(), dinossauro.getX(), dinossauro.getY(), this);
         dinossauro.animar();
+        g.setFont(new Font("Arial", 1, 20));
+        g.setColor(Color.BLACK);
+        g.drawString("Pontuacao: " + Integer.toString(dinossauro.getPontuacao()), LARGURA-220, 60);
         g.drawImage(backBuffer, 0, 0, this);
     }
 

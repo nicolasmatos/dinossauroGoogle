@@ -2,6 +2,7 @@ public class Sprite extends DesenhoMovel {
 
     private int cena = 0;
     private int controlaVelocidade = 0;
+    private int pontuacao = 0;
 
     public Sprite(){
         super();
@@ -37,5 +38,12 @@ public class Sprite extends DesenhoMovel {
     }
     public void setControlaVelocidade(int controlaVelocidade) {
         this.controlaVelocidade = controlaVelocidade;
+    }
+
+    public int getPontuacao() {
+        return pontuacao;
+    }
+    public void setPontuacao(int pontuacao) {
+        this.pontuacao = pontuacao;
     }
 }
