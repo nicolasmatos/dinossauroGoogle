@@ -6,15 +6,16 @@ public class ColisaoException extends Exception{
 
     }
     public ColisaoException(Sprite a) {
-        File file = new File("C:\\Dev\\Ideia\\dinossauroGoogle\\testesArquivos.txt");
+        File file = new File("C:\\Dev\\Ideia\\dinossauroGoogle\\pontos.txt");
 
         try {
             FileOutputStream fos = new FileOutputStream(file);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            DataOutputStream dos = new DataOutputStream(fos);
 
-            oos.writeObject(a.getPontuacao());
+            dos.writeChars("Pontos: ");
+            dos.writeInt(a.getPontuacao());
 
-            oos.close();
+            dos.close();
             fos.close();
         }
         catch (FileNotFoundException e1) {
