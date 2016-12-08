@@ -151,6 +151,7 @@ public class Principal extends JFrame implements Runnable, KeyListener {
                 colisao(dinossauro, cacto2_2);
                 colisao(dinossauro, cacto3);
             } catch (ColisaoException e) {
+                e.printStackTrace();
                 g = getGraphics();
                 bbg = backBuffer.getGraphics();
                 bbg.drawImage(gameOver.getImage(),0,0,this);
